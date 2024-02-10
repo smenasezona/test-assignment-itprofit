@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Тестовое задание itprofit"/>
+    <meta name="keywords" content="itprofit, seobility, форма"/>
+    <meta name="author" content="Кияшко Артём"/>
+    <link rel="stylesheet" href="/dist/main.css"/>
+    <title>Feedback Form</title>
+</head>
+<body>
+<main class="form-container">
+    <section class="feedback-container">
+        <section class="feedback-text-container">
+            <h2 class="feedback-text">Обратная связь</h2>
+        </section>
+        <form class="feedback-form" id="feedback-form" action="">
+            <section class="fields-container">
+                <section class="label-and-input">
+                    <label for="name">Имя</label>
+                    <input
+                            class="input-item"
+                            type="text"
+                            placeholder="Введите имя"
+                            name=""
+                            id="name"
+
+                    />
+                </section>
+                <section class="label-and-input">
+                    <label for="email">E-mail</label>
+                    <input
+                            class="input-item"
+                            type="email"
+                            placeholder="Введите E-mail"
+                            name=""
+                            id="email"
+
+                    />
+                </section>
+                <section class="label-and-input">
+                    <label for="tel">Телефон</label>
+                    <input
+                            class="input-item"
+                            type="text"
+                            placeholder="Введите телефонный номер"
+                            name=""
+                            id="tel"
+
+                    />
+                </section>
+                <section class="label-and-input">
+                    <label for="message">Сообщение</label>
+                    <textarea
+                            class="textarea"
+                            name=""
+                            placeholder="Введите ваше сообщение"
+                            id="message"
+                            cols="15"
+                            rows="7"
+
+                    ></textarea>
+                </section>
+            </section>
+            <section class="button-container">
+                <button type="submit" class="send-button">Отправить</button>
+                <button type="button" class="modal-button" id="openModal">Модальное окно</button>
+            </section>
+        </form>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <p class="modal-text">Произвольный текст ;)</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="/dist/main.js"></script>
+</body>
+</html>
