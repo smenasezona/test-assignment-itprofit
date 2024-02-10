@@ -9,20 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     function validateForm() {
-        let isValid = true;
+        let isValid = true
         const inputs = document.querySelectorAll('.input-item, .textarea')
         inputs.forEach(input => {
             if (!input.value) {
                 showError(input, 'Это поле обязательно для заполнения')
-                isValid = false;
+                isValid = false
             } else if (input.type === 'email' && !validateEmail(input.value)) {
                 showError(input, 'Введите корректный адрес электронной почты')
-                isValid = false;
+                isValid = false
             } else {
                 clearError(input)
             }
         })
-        return isValid;
+        return isValid
     }
 
     function showError(input, message) {
@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function validateEmail(email) {
         if (!email) {
-            return false;
+            return false
         }
         const re =
-            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         return re.test(String(email).toLowerCase())
     }
 })

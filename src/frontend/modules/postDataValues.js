@@ -23,10 +23,10 @@ document.getElementById("feedback-form").addEventListener("formValid", () => {
             console.log(result)
 
             if (result.status === "success") {
-                document.getElementById("feedback-form").reset();
-                document.getElementById("feedback-form").innerHTML = `<p class="response-msg">${result.message}</p>`;
+                document.getElementById("feedback-form").reset()
+                document.getElementById("feedback-form").innerHTML = `<p class="response-msg">${result.message}</p>`
             } else if (result.status === "error") {
-                document.getElementById("feedback-form").innerHTML = `<p class="response-msg">${result.message}</p>`;
+                document.getElementById("feedback-form").innerHTML = `<p class="response-msg">${result.message}</p>`
             }
 
         } catch (error) {
